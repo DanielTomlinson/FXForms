@@ -161,6 +161,10 @@ static inline NSArray *FXFormProperties(id<FXForm> form)
                                 {
                                     valueType = FXFormFieldTypeURL;
                                 }
+                                else if ([lowercaseKey hasSuffix:@"number"])
+                                {
+                                    valueType = FXFormFieldTypeNumber;
+                                }
                                 else
                                 {
                                     valueType = FXFormFieldTypeText;
